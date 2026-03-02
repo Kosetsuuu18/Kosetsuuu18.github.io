@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZONA GAMER CONSCIENTE // NIGHT CITY 2026</title>
-  <meta name="description" content="Equilibrio en el chrome: gaming consciente en México. Química cerebral, salud mental, relaciones reales, soluciones sin prohibir videojuegos. Level up tu vida sin perder el grind." />
+  <meta name="description" content="Equilibrio en los videojuegos: señales de exceso, soluciones reales y por qué jugamos. Para gamers en México que quieren disfrutar sin perder el control." />
   
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=VT323&display=swap" rel="stylesheet">
 
@@ -47,13 +47,14 @@
     }
 
     header {
-      position: sticky;
+      position: fixed;
       top: 0;
+      width: 100%;
       z-index: 100;
       background: rgba(0,0,20,0.92);
       backdrop-filter: blur(15px);
       border-bottom: 4px solid var(--cian);
-      padding: 1.5rem 6%;
+      padding: 1rem 6%;
       box-shadow: 0 6px 30px rgba(0,255,255,0.4);
     }
 
@@ -69,39 +70,32 @@
 
     .logo {
       font-family: 'VT323';
-      font-size: 3.2rem;
+      font-size: 2.8rem;
       color: var(--cian);
       text-shadow: 0 0 15px var(--cian), 0 0 30px var(--magenta);
-      animation: glitch-logo 6s infinite;
-    }
-
-    @keyframes glitch-logo {
-      0%, 100% { text-shadow: 4px 0 var(--rojo-glitch), -4px 0 var(--cian); }
-      20% { text-shadow: -4px -4px var(--magenta), 4px 4px var(--amarillo); }
-      40% { text-shadow: 4px -4px var(--cian), -4px 4px var(--rojo-glitch); }
     }
 
     .nav-links a {
       color: var(--texto-neon);
-      margin: 0 1.5rem;
+      margin: 0 1.2rem;
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       position: relative;
       transition: 0.4s;
     }
 
     .nav-links a:hover {
       color: var(--amarillo);
-      text-shadow: 0 0 25px var(--amarillo);
+      text-shadow: 0 0 20px var(--amarillo);
     }
 
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -8px;
+      bottom: -6px;
       left: 0;
       width: 0;
-      height: 4px;
+      height: 3px;
       background: var(--magenta);
       transition: width 0.5s;
     }
@@ -110,98 +104,78 @@
       width: 100%;
     }
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(rgba(0,0,20,0.8), rgba(0,0,20,0.95)), url('https://images.alphacoders.com/135/1356630.jpg') center/cover;
-      position: relative;
-    }
-
-    h1 {
-      font-family: 'VT323';
-      font-size: clamp(5rem, 14vw, 12rem);
-      color: var(--cian);
-      text-shadow: 0 0 30px var(--cian), 0 0 60px var(--magenta), 0 0 90px var(--amarillo);
-      animation: glitch-titulo 5s infinite;
-    }
-
-    @keyframes glitch-titulo {
-      0% { transform: translate(0); }
-      20% { transform: translate(-10px, 10px); }
-      40% { transform: translate(10px, -10px); }
-      60% { transform: translate(-10px, -10px); }
-      80% { transform: translate(10px, 10px); }
-      100% { transform: translate(0); }
+    main {
+      padding-top: 120px;
     }
 
     section {
-      padding: 8rem 6%;
+      padding: 6rem 6%;
       max-width: 1600px;
       margin: auto;
     }
 
+    h1 {
+      font-family: 'VT323';
+      font-size: clamp(4.5rem, 12vw, 10rem);
+      color: var(--cian);
+      text-shadow: 0 0 30px var(--cian), 0 0 60px var(--magenta);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
     h2 {
       font-family: 'VT323';
-      font-size: 5rem;
+      font-size: 4.5rem;
       color: var(--magenta);
       text-align: center;
-      margin-bottom: 4rem;
-      text-shadow: 0 0 50px var(--magenta);
+      margin-bottom: 3rem;
+      text-shadow: 0 0 40px var(--magenta);
     }
 
     .card {
       background: var(--tarjeta);
-      border: 4px solid var(--cian);
-      border-radius: 25px;
-      padding: 3.5rem;
-      margin: 3rem 0;
-      box-shadow: 0 0 50px rgba(0,255,255,0.4);
-      transition: all 0.6s;
-      backdrop-filter: blur(10px);
+      border: 3px solid var(--cian);
+      border-radius: 20px;
+      padding: 3rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 0 40px rgba(0,255,255,0.3);
+      transition: all 0.5s;
     }
 
     .card:hover {
-      transform: translateY(-25px);
-      box-shadow: 0 0 100px var(--cian), inset 0 0 40px var(--magenta);
-      border-color: var(--amarillo);
+      transform: translateY(-15px);
+      box-shadow: 0 0 80px var(--cian);
     }
 
     .btn-hack {
-      background: linear-gradient(45deg, var(--cian), var(--magenta), var(--amarillo));
+      background: linear-gradient(45deg, var(--cian), var(--magenta));
       color: #000;
-      padding: 1.5rem 3.5rem;
+      padding: 1.2rem 3rem;
       border: none;
-      border-radius: 70px;
+      border-radius: 60px;
       cursor: pointer;
       font-family: 'VT323';
-      font-size: 2rem;
-      margin: 2.5rem auto;
+      font-size: 1.8rem;
       display: block;
-      box-shadow: 0 0 40px var(--cian);
-      transition: 0.5s;
+      margin: 2rem auto;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 0 30px var(--cian);
+      transition: 0.4s;
     }
 
     .btn-hack:hover {
-      box-shadow: 0 0 80px var(--magenta);
-      transform: scale(1.15);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 3rem;
+      box-shadow: 0 0 60px var(--magenta);
+      transform: scale(1.1);
     }
 
     footer {
       text-align: center;
-      padding: 6rem 6%;
-      background: rgba(0,0,0,0.98);
-      border-top: 6px solid var(--magenta);
+      padding: 4rem 6%;
+      background: rgba(0,0,0,0.95);
+      border-top: 5px solid var(--magenta);
       color: #aaa;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   </style>
 </head>
@@ -209,110 +183,42 @@
 
   <header>
     <nav>
-      <div class="logo">ZONA GAMER CONSCIENTE // NIGHT CITY</div>
+      <div class="logo">ZONA GAMER CONSCIENTE</div>
       <div class="nav-links">
-        <a href="#inicio">INICIO</a>
-        <a href="#por-que-jugamos">¿POR QUÉ JUGAMOS?</a>
-        <a href="#quimica">QUÍMICA CEREBRAL</a>
-        <a href="#salud-mental">SALUD MENTAL</a>
-        <a href="#cuerpo">CUERPO Y SUEÑO</a>
-        <a href="#relaciones">RELACIONES REALES</a>
-        <a href="#redes">REDES Y STREAMING</a>
-        <a href="#mitos">MITOS Y VERDADES</a>
-        <a href="#beneficios">BENEFICIOS REALES</a>
-        <a href="#juegos-sanos">JUEGOS SANOS</a>
-        <a href="#soluciones">SOLUCIONES</a>
+        <a href="index.html">Inicio</a>
+        <a href="articulos.html">Artículos</a>
+        <a href="yo.html">Sobre mí</a>
       </div>
     </nav>
   </header>
 
-  <section id="inicio" class="hero">
-    <div>
-      <h1>NO DEJES QUE EL GRIND TE FLATLINE</h1>
-      <p style="font-size:2.5rem; max-width:1200px; margin:3.5rem auto; text-shadow:0 0 25px var(--cian);">
-        En México 2026, 21 millones de personas jugamos videojuegos.<br>
-        Solo 0.9% tiene trastorno real (ENCODAT 2025).<br>
-        El gaming es parte de la vida – no hay que prohibirlo.<br>
-        El hack es controlarlo: disfrutar sin que te controle.
-      </p>
-      <button class="btn-hack" onclick="scrollToSection('#por-que-jugamos')">¿POR QUÉ JUGAMOS?</button>
-    </div>
-  </section>
-
-  <section id="por-que-jugamos">
-    <h2>¿POR QUÉ JUGAMOS? – PSICOLOGÍA DEL GRIND</h2>
-    <div class="card">
-      <p>Nuestro cerebro está cableado para buscar recompensas, desafíos y conexiones. Los videojuegos son un hack brutal para eso.</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Competencia y Maestría</h3>
-          <p>Queremos sentirnos buenos en algo. Cada kill, cada boss, cada build perfecta libera dopamina. Nos hace sentir que progresamos. Beneficio: mejora perseverancia y autoestima.</p>
-        </div>
-
-        <div class="card">
-          <h3>Autonomía total</h3>
-          <p>Tú decides tu camino, tu build, tus elecciones morales. No hay jefe que te ordene. Satisfaces la necesidad de control sobre tu destino.</p>
-        </div>
-
-        <div class="card">
-          <h3>Conexión real o virtual</h3>
-          <p>Jugar con cuates libera oxitocina. Clanes, squads, discords – muchos usan gaming para socializar. Reduce soledad y mejora habilidades sociales.</p>
-        </div>
-
-        <div class="card">
-          <h3>Escape y fantasía</h3>
-          <p>La vida real a veces es pesada. Los juegos ofrecen mundos donde eres héroe o explorador. Es humano recargar así – el problema es cuando se convierte en huida permanente.</p>
-        </div>
-
-        <div class="card">
-          <h3>Exploración y creatividad</h3>
-          <p>Curiosidad innata: descubrir mundos nuevos (Minecraft, No Man's Sky, Zelda). Estimula pensamiento lateral y aprendizaje constante.</p>
-        </div>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>NO DEJES QUE EL GRIND TE CONTROLE</h1>
+        <p style="font-size:2.2rem; max-width:1100px; margin:3rem auto; text-align:center;">
+          En México, millones jugamos videojuegos todos los días.<br>
+          La mayoría lo hace sin problema, pero cuando se sale de control puede afectar notas, salud, relaciones y más.<br>
+          Aquí no te digo que dejes de jugar.<br>
+          Te digo cómo jugar sin que te juegue a ti.
+        </p>
+        <a href="articulos.html" class="btn-hack">Ver todos los artículos</a>
       </div>
+    </section>
 
-      <p style="text-align:center; margin-top:4rem; font-size:2.2rem;">
-        Jugamos porque los videojuegos satisfacen necesidades básicas del ser humano.<br>
-        No es malo – es natural. El chiste es no dejar que el sistema te hackee.
-      </p>
-
-      <button class="btn-hack" onclick="scrollToSection('#quimica')">SIGUIENTE: LA QUÍMICA CEREBRAL</button>
-    </div>
-  </section>
-
-  <section id="quimica">
-    <h2>QUÍMICA CEREBRAL – DOPAMINA COMO EN UN GIG</h2>
-    <div class="card">
-      <p>Cada victoria, loot o kill es un rush de dopamina. Similar al enamoramiento o una apuesta ganada. Juegos como Valorant o Fortnite diseñan loops infinitos: actualizaciones constantes reinician el ciclo. Oxitocina en co-op, serotonina baja cuando pierdes ranking. El cerebro se acostumbra y pide más. Pero jugar con conciencia es posible – no hay que eliminar el chrome, solo controlarlo.</p>
-    </div>
-  </section>
-
-  <!-- Aquí puedes seguir añadiendo las otras secciones que ya tenías o nuevas -->
-
-  <section id="soluciones">
-    <h2>SOLUCIONES – SIN PROHIBIR NADA</h2>
-    <div class="card">
-      <p>No se trata de dejar de jugar para siempre. Se trata de hackear el equilibrio para que sigas disfrutando sin que te domine.</p>
-      
-      <ul style="font-size:1.8rem; list-style:none; padding:0;">
-        <li>→ Mide tus horas reales (Screen Time, RescueTime)</li>
-        <li>→ Regla 80/20: 80% vida offline, 20% gaming</li>
-        <li>→ Rutina: deporte/estudio primero, juego después</li>
-        <li>→ Breaks cada 45-60 min (regla 20-20-20 para ojos)</li>
-        <li>→ Apps bloqueadoras: Freedom, Cold Turkey</li>
-        <li>→ Duerme 7-9h (pantallas off 1h antes)</li>
-        <li>→ Juega con cuates en persona también</li>
-      </ul>
-
-      <p style="margin-top:3rem; font-size:2rem; text-align:center;">
-        El gaming puede ser parte sana de tu vida en México.<br>
-        Controla el chrome – no dejes que te controle.
-      </p>
-    </div>
-  </section>
+    <section>
+      <h2>Bienvenido, choom</h2>
+      <div class="card">
+        <p>Este blog es para gamers que quieren disfrutar los videojuegos sin que se conviertan en un problema.</p>
+        <p>Aquí hablamos claro: señales de exceso, qué pasa en tu cabeza cuando juegas mucho, cómo afecta tu vida real y soluciones reales sin prohibiciones.</p>
+        <p>Todo desde México, con lenguaje directo y sin rodeos.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>MADE IN MÉXICO // 2026 // CHOOM, STAY CONSCIOUS OR GET FLATLINED</p>
+    <p>Hecho en México • 2026 • Para gamers que quieren equilibrio real</p>
+    <p>¿Quieres contarme tu historia? Escríbeme: [tu email o link de form]</p>
   </footer>
 
   <script>
