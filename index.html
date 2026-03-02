@@ -3,125 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <title>Zona Gamer Consciente</title>
+
 <style>
 
+:root{
+--bg:#0f0f1a;
+--text:white;
+--primary:#00f7ff;
+--secondary:#ff00c8;
+--card:#1a1a2e;
+}
+
+.light{
+--bg:#f2f2f2;
+--text:#111;
+--primary:#0066ff;
+--secondary:#cc00aa;
+--card:white;
+}
+
 body{
-    margin:0;
-    font-family:'Segoe UI', sans-serif;
-    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-    color:white;
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:0.4s;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:var(--primary);
+margin:0;
+}
+
+nav button{
+background:var(--secondary);
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+color:white;
 }
 
 header{
-    text-align:center;
-    padding:60px 20px;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 header h1{
-    font-size:50px;
-    color:#00f7ff;
-    animation: aparecer 1.5s ease-in-out;
+font-size:60px;
+color:var(--primary);
 }
 
 header p{
-    font-size:20px;
-    color:#ff00c8;
+font-size:22px;
+color:var(--secondary);
 }
 
-.container{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-    padding:40px;
+.section{
+padding:100px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.cards{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .card{
-    background:#111;
-    border-radius:20px;
-    width:300px;
-    overflow:hidden;
-    box-shadow:0 0 20px rgba(0,255,255,0.3);
-    transition:0.4s;
-    cursor:pointer;
+background:var(--card);
+border-radius:20px;
+width:320px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+transition:0.4s;
+opacity:0;
+transform:translateY(50px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
-    transform:scale(1.07);
-    box-shadow:0 0 40px rgba(255,0,200,0.6);
+transform:scale(1.05);
 }
 
 .card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-.card h2{
-    padding:20px;
-    color:#00f7ff;
+.card h3{
+padding:20px;
+color:var(--primary);
 }
 
 .card p{
-    padding:0 20px 20px 20px;
+padding:0 20px 20px 20px;
+}
+
+.card a{
+display:block;
+margin:20px;
+padding:10px;
+background:var(--secondary);
+text-align:center;
+border-radius:20px;
+color:white;
+text-decoration:none;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    color:#aaa;
-}
-
-@keyframes aparecer{
-    from{opacity:0;transform:translateY(-30px);}
-    to{opacity:1;transform:translateY(0);}
-}
-
-a{
-    text-decoration:none;
-    color:white;
+text-align:center;
+padding:40px;
+opacity:0.6;
 }
 
 </style>
 </head>
 <body>
 
+<nav>
+<h2>Zona Gamer Consciente</h2>
+<button onclick="modo()">Modo claro / oscuro</button>
+</nav>
+
 <header>
-    <h1>Zona Gamer Consciente</h1>
-    <p>Disfruta los videojuegos sin perder el control</p>
+<h1>Disfruta los videojuegos sin perder el control</h1>
+<p>Información real. Consejos prácticos. Experiencias honestas.</p>
 </header>
 
-<div class="container">
+<div class="section">
+<div class="cards">
 
-<a href="peligros.html">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5" alt="">
-<h2>Riesgos ocultos</h2>
-<p>Lo que nadie te cuenta sobre el uso excesivo.</p>
+<img src="https://images.unsplash.com/photo-1580327332925-a10e6cb11baa">
+<h3>Riesgos ocultos</h3>
+<p>Descubre cómo el exceso puede afectar tu mente, sueño y relaciones.</p>
+<a href="peligros.html">Leer más</a>
 </div>
-</a>
 
-<a href="exceso.html">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6" alt="">
-<h2>Señales de alerta</h2>
-<p>Detecta si estás perdiendo el equilibrio.</p>
+<img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
+<h3>Señales de alerta</h3>
+<p>Aprende a identificar cuándo el juego deja de ser saludable.</p>
+<a href="exceso.html">Leer más</a>
 </div>
-</a>
 
-<a href="historia.html">
 <div class="card">
-<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420" alt="">
-<h2>Historia real</h2>
-<p>Cómo alguien recuperó el control sin dejar de jugar.</p>
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+<h3>Historia real</h3>
+<p>Un gamer que recuperó el equilibrio sin abandonar su pasión.</p>
+<a href="historia.html">Leer más</a>
 </div>
-</a>
 
+</div>
 </div>
 
 <footer>
 Proyecto personal 2026 | Blog gamer responsable
 </footer>
+
+<script>
+
+function modo(){
+document.body.classList.toggle("light");
+}
+
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".card").forEach(card=>{
+const top=card.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+card.classList.add("show");
+}
+});
+});
+
+</script>
 
 </body>
 </html>
