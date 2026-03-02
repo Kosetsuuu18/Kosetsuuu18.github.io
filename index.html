@@ -3,46 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zona Gamer Consciente</title>
-  <!-- Pega aquí el CSS base de arriba -->
+  <title>ZONA GAMER CONSCIENTE • Neón Edition 2026</title>
+  <meta name="description" content="23.2% de mexicanos jugamos • Solo 0.9% adictos • Detecta el exceso y level up tu vida">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-green: #00ff9d;
+      --neon-purple: #ff00ff;
+      --dark: #0d0d0d;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: var(--dark);
+      color: #eee;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(0,255,157,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255,0,255,0.08) 0%, transparent 50%);
+    }
+    header {
+      position: sticky; top:0; z-index:100;
+      background: rgba(13,13,13,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--neon-green);
+      padding: 1rem 5%;
+    }
+    nav {
+      max-width: 1200px; margin:auto;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .logo {
+      font-family: 'Orbitron', monospace;
+      font-size: 2.2rem;
+      font-weight:900;
+      background: linear-gradient(90deg, var(--neon-green), var(--neon-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links a {
+      color: white; margin:0 1.5rem; text-decoration:none; font-weight:700;
+      position:relative; transition:0.4s;
+    }
+    .nav-links a:hover {
+      color: var(--neon-green);
+      text-shadow: 0 0 15px var(--neon-green);
+    }
+    .nav-links a::after {
+      content:''; position:absolute; bottom:-6px; left:0; width:0; height:3px;
+      background: var(--neon-green); transition:0.4s;
+    }
+    .nav-links a:hover::after { width:100%; }
+
+    .hero {
+      height: 100vh; display:flex; align-items:center; justify-content:center; text-align:center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1616588587687-4d8a9c5e5a5e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+    }
+    h1 {
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(3rem, 8vw, 6rem);
+      animation: neonGlow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes neonGlow {
+      from { text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d, 0 0 40px #ff00ff; }
+      to   { text-shadow: 0 0 20px #00ff9d, 0 0 40px #00ff9d, 0 0 80px #ff00ff; }
+    }
+
+    section { padding: 6rem 5%; max-width:1200px; margin:auto; }
+    h2 {
+      font-family: 'Orbitron', monospace;
+      font-size: 3rem;
+      text-align:center;
+      margin-bottom:3rem;
+      color: var(--neon-green);
+      text-shadow: 0 0 30px var(--neon-green);
+    }
+    .card {
+      background: #1a1a1a;
+      border: 2px solid rgba(0,255,157,0.3);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      transition: all 0.4s;
+      box-shadow: 0 0 20px rgba(0,255,157,0.1);
+    }
+    .card:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 0 40px var(--neon-green);
+      border-color: var(--neon-green);
+    }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap:2rem; }
+
+    /* TEST INTERACTIVO */
+    #test-result {
+      margin-top:2rem; padding:1.5rem; border-radius:15px; font-size:1.4rem; font-weight:700;
+      text-align:center; display:none;
+    }
+    button {
+      background: linear-gradient(45deg, var(--neon-green), var(--neon-purple));
+      color:black; font-weight:900; padding:1rem 3rem; border:none; border-radius:50px;
+      font-size:1.3rem; cursor:pointer; margin-top:1.5rem; transition:0.3s;
+    }
+    button:hover { transform:scale(1.1); box-shadow:0 0 30px var(--neon-green); }
+
+    footer {
+      text-align:center; padding:3rem; background:#0a0a0a; border-top:3px solid var(--neon-purple);
+      color:#666;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <h1>Zona Gamer Consciente</h1>
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="historia.html">Historia</a>
-      <a href="exceso.html">Señales</a>
-      <a href="peligros.html">Riesgos</a>
-      <a href="solucion.html">Soluciones</a>
+      <div class="logo">ZONA GAMER CONSCIENTE</div>
+      <div class="nav-links">
+        <a href="#hero">INICIO</a>
+        <a href="#historia">HISTORIA</a>
+        <a href="#exceso">SEÑALES</a>
+        <a href="#peligros">RIESGOS</a>
+        <a href="#solucion">SOLUCIONES</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h2>Videojuegos con equilibrio</h2>
-    <p>Información real para gamers en México. Detecta el exceso y mantén el balance.</p>
-
-    <div class="card">
-      <h3>Historia real</h3>
-      <p>Un joven recuperó el control... <a href="historia.html">Leer más</a></p>
+  <section id="hero" class="hero">
+    <div>
+      <h1>¿JUEGAS O TE JUEGAN?</h1>
+      <p style="font-size:1.6rem; max-width:800px; margin:2rem auto; color:#ccc;">
+        23.2% de mexicanos jugamos videojuegos (21 millones)<br>
+        Solo el 0.9% tiene trastorno real (ENCODAT 2025)<br>
+        <strong>¿Estás en la zona roja o en la zona consciente?</strong>
+      </p>
+      <img src="https://thumbs.dreamstime.com/b/game-addiction-concept-hands-young-man-holds-controller-tied-chain-218921330.jpg" alt="Control encadenado neon" style="max-width:700px; border-radius:20px; box-shadow:0 0 50px #00ff9d;">
     </div>
+  </section>
 
+  <!-- Más secciones con contenido expandido + imágenes chingonas -->
+
+  <section id="historia">
+    <h2>HISTORIA REAL</h2>
     <div class="card">
-      <h3>Señales de alerta</h3>
-      <p>¿Estás perdiendo control? <a href="exceso.html">Ver señales</a></p>
+      <img src="https://gameworldobserver.com/wp-content/uploads/2020/11/gaming-history-50-years-timeline-revenue-up2.jpg" alt="Timeline historia videojuegos" style="width:100%; border-radius:15px;">
+      <p style="margin-top:2rem;">Un morro mexicano empezó con 2 horas diarias… terminó jugando 10h y perdiendo escuela, amigos y sueño. Un día decidió poner reglas: juego SOLO después de tareas y gym. En 90 días recuperó notas, energía y novia. Hoy es streamer consciente y ayuda a otros.</p>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Riesgos ocultos</h3>
-      <p>Sueño jodido, notas bajas... <a href="peligros.html">Conoce los peligros</a></p>
+  <section id="exceso">
+    <h2>SEÑALES DE EXCESO • TEST INTERACTIVO</h2>
+    <div class="grid">
+      <div class="card">
+        <p><strong>1.</strong> ¿Intentas parar y no puedes?</p>
+        <input type="checkbox" id="q1"> Sí
+      </div>
+      <div class="card">
+        <p><strong>2.</strong> ¿Te encabronas si te quitan el control?</p>
+        <input type="checkbox" id="q2"> Sí
+      </div>
+      <div class="card">
+        <p><strong>3.</strong> ¿Mientes sobre cuántas horas juegas?</p>
+        <input type="checkbox" id="q3"> Sí
+      </div>
+      <div class="card">
+        <p><strong>4.</strong> ¿Saltas tareas, escuela o familia por jugar?</p>
+        <input type="checkbox" id="q4"> Sí
+      </div>
     </div>
+    <center>
+      <button onclick="calcularTest()">CALCULAR MI NIVEL DE RIESGO</button>
+      <div id="test-result"></div>
+    </center>
+  </section>
 
-    <div class="card">
-      <h3>Cómo solucionarlo</h3>
-      <p>Horarios, deporte, comunicación... <a href="solucion.html">Ver soluciones</a></p>
+  <!-- Peligros, Soluciones... (te las dejo expandidas igual) -->
+
+  <section id="peligros">
+    <h2>RIESGOS REALES (ENCODAT 2025 + WHO)</h2>
+    <div class="grid">
+      <div class="card">Sueño destruido • Luz azul mata melatonina → menos foco, más ansiedad</div>
+      <div class="card">Notas en el piso • +4h/día = peor rendimiento académico</div>
+      <div class="card">Aislamiento • Menos amigos reales, más toxicidad online</div>
+      <div class="card">Salud física • Sedentarismo, vista dañada, obesidad</div>
     </div>
-  </main>
+  </section>
 
+  <section id="solucion">
+    <h2>SOLUCIONES QUE SÍ FUNCIONAN</h2>
+    <div class="grid">
+      <div class="card">Regla 80/20: 80% vida real • 20% grind</div>
+      <div class="card">Apps bloqueadoras (Freedom, Screen Time)</div>
+      <div class="card">Gym primero, luego juego (dopamina sana)</div>
+      <div class="card">Habla con tus papás sin miedo</div>
+    </div>
+    <img src="https://dezctop.com/wp-content/uploads/2024/07/gaming-room-setup-ideas.jpg" alt="Setup gamer equilibrado" style="width:100%; border-radius:20px; margin-top:3rem;">
+  </section>
+
+  <footer>
+    <p>Hecho en Toluca, México • 2026 • Para gamers que quieren level up su vida real</p>
+  </footer>
+
+  <script>
+    function calcularTest() {
+      let puntos = 0;
+      if(document.getElementById('q1').checked) puntos++;
+      if(document.getElementById('q2').checked) puntos++;
+      if(document.getElementById('q3').checked) puntos++;
+      if(document.getElementById('q4').checked) puntos++;
+      
+      const result = document.getElementById('test-result');
+      result.style.display = 'block';
+      
+      if(puntos >= 3) {
+        result.style.background = '#ff0066';
+        result.innerHTML = '🚨 NIVEL ROJO • Estás en zona de peligro. Lee las soluciones ya.';
+      } else if(puntos === 2) {
+        result.style.background = '#ffaa00';
+        result.innerHTML = '⚠️ NIVEL AMARILLO • Cuidado, vas por mal camino. Pon límites hoy.';
+      } else {
+        result.style.background = '#00ff9d';
+        result.innerHTML = '✅ NIVEL VERDE • ¡Estás consciente! Sigue así y ayuda a tus cuates.';
+      }
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
