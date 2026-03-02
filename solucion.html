@@ -2,149 +2,89 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
 <title>Cómo solucionarlo</title>
 
 <style>
-
-:root{
---bg:#0f1226;
---text:white;
---primary:#00eaff;
---secondary:#ff2bd6;
---card:#1c1f3a;
-}
-
-.light{
---bg:#f4f4f4;
---text:#111;
---primary:#0066ff;
---secondary:#cc00aa;
---card:white;
-}
+*{box-sizing:border-box;}
 
 body{
 margin:0;
 font-family:'Segoe UI', sans-serif;
-background:var(--bg);
-color:var(--text);
-transition:.4s;
+background:#ffffff;
+color:#1a1a1a;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#111827;
+background:#ffffff;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-z-index:1000;
+padding:20px 80px;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
 
-nav h2{
-margin:0;
-color:var(--primary);
-}
-
-nav button{
-background:var(--secondary);
-border:none;
-padding:8px 16px;
-border-radius:20px;
-cursor:pointer;
-color:white;
-}
+nav h2{margin:0;color:#2563eb;}
+nav a{text-decoration:none;color:#2563eb;font-weight:600;}
 
 .container{
-max-width:950px;
-margin:120px auto;
+max-width:900px;
+margin:140px auto 100px auto;
 padding:20px;
 }
 
-.hero{
-width:100%;
-height:350px;
-background:url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Family_playing_video_game_together.jpg') center/cover no-repeat;
-border-radius:20px;
-margin-bottom:40px;
-}
-
 h1{
-color:var(--primary);
-font-size:42px;
+color:#2563eb;
+margin-bottom:30px;
 }
 
-h2{
-color:var(--secondary);
-margin-top:40px;
+.card{
+background:#ffffff;
+padding:35px;
+border-radius:22px;
+margin-bottom:35px;
+box-shadow:0 15px 40px rgba(0,0,0,0.07);
 }
 
-.section{
-background:var(--card);
-padding:25px;
-border-radius:15px;
-margin-top:20px;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
+footer{
+text-align:center;
+padding:40px;
+color:#888;
 }
-
-a{
-color:var(--secondary);
-text-decoration:none;
-}
-
 </style>
 </head>
+
 <body>
 
 <nav>
 <h2>Zona Gamer Consciente</h2>
-<button onclick="modo()">Modo claro / oscuro</button>
+<a href="index.html">Inicio</a>
 </nav>
 
 <div class="container">
 
-<h1>Cómo ayudar sin prohibir ni quitar el teléfono</h1>
+<h1>Cómo solucionarlo</h1>
 
-<div class="hero"></div>
-
-<p>Prohibir puede generar más rebeldía que solución. El objetivo real no es eliminar los videojuegos, sino enseñar equilibrio y responsabilidad digital.</p>
-
-<div class="section">
-<h2>1. Crear acuerdos claros</h2>
-<p>En lugar de imponer reglas, es mejor establecer acuerdos. Definir horarios razonables después de cumplir con responsabilidades genera compromiso, no conflicto.</p>
+<div class="card">
+<p>Establecer horarios claros y acordados ayuda a mantener el equilibrio sin prohibiciones extremas.</p>
 </div>
 
-<div class="section">
-<h2>2. Mostrar interés genuino</h2>
-<p>Preguntar qué juegan, con quién juegan y por qué les gusta fortalece la comunicación. Cuando los adultos entienden el mundo digital, hay menos choque.</p>
+<div class="card">
+<p>Fomentar actividades fuera de la pantalla como deporte o proyectos personales reduce la dependencia.</p>
 </div>
 
-<div class="section">
-<h2>3. Ofrecer alternativas atractivas</h2>
-<p>No basta con decir “deja el teléfono”. Debe existir algo interesante fuera de la pantalla: deporte, proyectos creativos, salidas, actividades sociales.</p>
+<div class="card">
+<p>La comunicación constante y el ejemplo en casa son claves para un uso saludable.</p>
 </div>
-
-<div class="section">
-<h2>4. Dar ejemplo en casa</h2>
-<p>Si los adultos pasan todo el tiempo en el móvil, el mensaje pierde fuerza. El equilibrio empieza con el ejemplo.</p>
-</div>
-
-<div class="section">
-<h2>5. Enseñar autorregulación</h2>
-<p>El objetivo final no es controlar para siempre, sino que aprendan a gestionar su tiempo solos. Esa es la verdadera educación digital.</p>
-</div>
-
-<br>
-<a href="index.html">← Volver al inicio</a>
 
 </div>
 
-<script>
-function modo(){
-document.body.classList.toggle("light");
-}
-</script>
+<footer>
+Proyecto educativo 2026
+</footer>
 
 </body>
 </html>
