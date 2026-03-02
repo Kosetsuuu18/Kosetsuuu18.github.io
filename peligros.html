@@ -2,158 +2,74 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Zona Gamer Consciente</title>
+<meta name="color-scheme" content="light">
+<title>Riesgos ocultos</title>
 
 <style>
+*{box-sizing:border-box;}
+
 body{
 margin:0;
+background:#ffffff !important;
+color:#111;
 font-family:'Segoe UI', sans-serif;
-background:#f9fafc;
-color:#222;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:white;
+background:#ffffff;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 60px;
-box-shadow:0 2px 15px rgba(0,0,0,0.08);
-z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-nav h2{
-margin:0;
-color:#2563eb;
-}
-
-header{
-margin-top:140px;
-text-align:center;
-padding:40px 20px;
-}
-
-header h1{
-font-size:48px;
-color:#2563eb;
-margin-bottom:10px;
-}
-
-header p{
-font-size:20px;
-color:#555;
-}
+nav h2{color:#2563eb;margin:0;}
+nav a{text-decoration:none;color:#2563eb;font-weight:bold;}
 
 .container{
-max-width:1200px;
-margin:60px auto;
+max-width:900px;
+margin:140px auto 80px auto;
 padding:20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
 }
 
 .card{
-background:white;
-border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-overflow:hidden;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 40px rgba(0,0,0,0.12);
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-.card-content{
-padding:25px;
-}
-
-.card h3{
-margin-top:0;
-color:#2563eb;
-}
-
-.card p{
-color:#555;
-}
-
-.card a{
-display:inline-block;
-margin-top:15px;
-padding:10px 18px;
-background:#2563eb;
-color:white;
+background:#ffffff;
+padding:30px;
 border-radius:20px;
-text-decoration:none;
-font-size:14px;
+margin-bottom:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
+
+h1{color:#2563eb;}
 
 footer{
 text-align:center;
 padding:40px;
 color:#777;
 }
-
 </style>
 </head>
 <body>
 
 <nav>
 <h2>Zona Gamer Consciente</h2>
+<a href="index.html">Inicio</a>
 </nav>
-
-<header>
-<h1>Videojuegos con equilibrio</h1>
-<p>Información, prevención y soluciones reales</p>
-</header>
 
 <div class="container">
 
+<h1>Riesgos del uso excesivo</h1>
+
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Video_game_controller.jpg">
-<div class="card-content">
-<h3>Riesgos ocultos</h3>
-<p>Descubre cómo el uso excesivo puede afectar diferentes áreas de la vida.</p>
-<a href="peligros.html">Leer más</a>
-</div>
+<p>Problemas de sueño, bajo rendimiento escolar, aislamiento social y cambios emocionales pueden aparecer cuando no hay control en el tiempo de juego.</p>
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Playing_video_games.jpg">
-<div class="card-content">
-<h3>Señales de alerta</h3>
-<p>Aprende a detectar cuándo el juego pierde el equilibrio.</p>
-<a href="exceso.html">Leer más</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Gamer_playing.jpg">
-<div class="card-content">
-<h3>Historia real</h3>
-<p>Un caso de cómo recuperar el control sin abandonar la pasión.</p>
-<a href="historia.html">Leer más</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Family_playing_video_game_together.jpg">
-<div class="card-content">
-<h3>Cómo solucionarlo</h3>
-<p>Estrategias prácticas para padres sin prohibiciones extremas.</p>
-<a href="solucion.html">Leer más</a>
-</div>
+<p>El equilibrio es la clave: los videojuegos no son el problema, el exceso sí lo es.</p>
 </div>
 
 </div>
