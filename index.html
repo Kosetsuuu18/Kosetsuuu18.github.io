@@ -5,122 +5,135 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Entre Pixeles y Realidad</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #0f0f14;
-    color: #e4e4e4;
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color:#0f0f17;
+    color:white;
 }
 
-header {
-    background: linear-gradient(90deg, #1f1f2e, #2b2b45);
-    padding: 40px 20px;
-    text-align: center;
+.hero{
+    height:90vh;
+    background-image:url('https://images.unsplash.com/photo-1605902711622-cfb43c44367f');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-blend-mode:darken;
+    background-color:rgba(0,0,0,0.6);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+.hero h1{
+    font-size:3.5em;
+    margin:0;
 }
 
-header p {
-    margin-top: 10px;
-    color: #aaa;
+.hero p{
+    font-size:1.3em;
+    max-width:700px;
 }
 
-nav {
-    background-color: #181824;
-    text-align: center;
-    padding: 10px;
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
 }
 
-nav a {
-    color: #b3b3ff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2em;
+    color:#8c8cff;
 }
 
-nav a:hover {
-    color: white;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+.card{
+    background:#1a1a2e;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
 
-.post {
-    background-color: #1a1a28;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 8px;
+.card:hover{
+    transform:translateY(-10px);
 }
 
-.post h2 {
-    margin-top: 0;
-    color: #8c8cff;
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #181824;
-    color: #777;
+.card-content{
+    padding:20px;
 }
+
+.card h3{
+    margin-top:0;
+    color:#b3b3ff;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#141421;
+    color:#777;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="hero">
     <h1>Entre Pixeles y Realidad</h1>
     <p>Explorando lo que los videojuegos nos dan… y lo que nos quitan.</p>
-</header>
+</div>
 
-<nav>
-    <a href="#">Inicio</a>
-    <a href="#">Riesgos</a>
-    <a href="#">Lo Positivo</a>
-    <a href="#">Reflexiones</a>
-</nav>
+<div class="section">
+    <h2>Publicaciones</h2>
 
-<div class="container">
+    <div class="grid">
 
-    <div class="post">
-        <h2>¿Los videojuegos son peligrosos o el problema es cómo los usamos?</h2>
-        <p>
-        Los videojuegos forman parte de la vida de millones de jóvenes. 
-        Pueden ser entretenimiento, comunidad y aprendizaje, pero también pueden generar problemas 
-        cuando se usan sin límites. En este blog analizamos ambos lados para entender su verdadero impacto.
-        </p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
+            <div class="card-content">
+                <h3>¿Los videojuegos son peligrosos?</h3>
+                <p>Analizamos si el problema son los videojuegos o la forma en que los usamos.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+            <div class="card-content">
+                <h3>5 señales de exceso</h3>
+                <p>Cuando jugar deja de ser entretenimiento y empieza a afectar tu vida.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+            <div class="card-content">
+                <h3>Me di cuenta cuando ya no me divertía</h3>
+                <p>Un testimonio sobre recuperar el equilibrio sin abandonar los videojuegos.</p>
+            </div>
+        </div>
+
     </div>
-
-    <div class="post">
-        <h2>5 señales de que podrías estar jugando en exceso</h2>
-        <p>
-        1. Pierdes la noción del tiempo.<br>
-        2. Descuidas responsabilidades.<br>
-        3. Te molestas cuando no puedes jugar.<br>
-        4. Usas el juego como única forma de escape.<br>
-        5. Afecta tu sueño o tu salud.
-        </p>
-    </div>
-
-    <div class="post">
-        <h2>Me di cuenta cuando ya no me divertía</h2>
-        <p>
-        A veces el problema no es cuánto juegas, sino por qué juegas. 
-        Cuando el juego deja de ser diversión y se vuelve rutina automática, 
-        es momento de reflexionar.
-        </p>
-    </div>
-
 </div>
 
 <footer>
-    © 2026 Entre Pixeles y Realidad | Blog de análisis sobre videojuegos
+© 2026 Entre Pixeles y Realidad
 </footer>
 
 </body>
