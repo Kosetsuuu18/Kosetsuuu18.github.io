@@ -5,66 +5,70 @@
 <title>Historia real</title>
 
 <style>
-:root{
---bg:#0f0f1a;
---text:white;
---primary:#00f7ff;
---secondary:#ff00c8;
-}
-
-.light{
---bg:#f2f2f2;
---text:#111;
---primary:#0066ff;
---secondary:#cc00aa;
-}
-
 body{
 margin:0;
 font-family:'Segoe UI', sans-serif;
-background:var(--bg);
-color:var(--text);
-transition:0.4s;
+background:#f9fafc;
+color:#222;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.8);
+background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+padding:20px 60px;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+z-index:1000;
 }
 
-nav h2{color:var(--primary);margin:0;}
+nav h2{
+margin:0;
+color:#2563eb;
+}
 
-nav button{
-background:var(--secondary);
-border:none;
-padding:8px 15px;
-border-radius:20px;
-cursor:pointer;
-color:white;
+nav a{
+text-decoration:none;
+color:#2563eb;
+font-weight:bold;
 }
 
 .container{
-max-width:900px;
-margin:120px auto;
+max-width:1000px;
+margin:140px auto 80px auto;
 padding:20px;
 }
 
-h1{color:var(--primary);}
-h2{color:var(--secondary);margin-top:40px;}
-
-img{
+.hero{
 width:100%;
+height:350px;
+background:url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Gamer_playing.jpg') center/cover no-repeat;
 border-radius:20px;
-margin:30px 0;
+margin-bottom:50px;
 }
 
-a{color:var(--secondary);text-decoration:none;}
+h1{
+font-size:42px;
+color:#2563eb;
+margin-bottom:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#777;
+}
 
 </style>
 </head>
@@ -72,36 +76,27 @@ a{color:var(--secondary);text-decoration:none;}
 
 <nav>
 <h2>Zona Gamer Consciente</h2>
-<button onclick="modo()">Modo claro / oscuro</button>
+<a href="index.html">Inicio</a>
 </nav>
 
 <div class="container">
 
-<h1>Cómo recuperé el equilibrio sin dejar de jugar</h1>
+<h1>Una historia de equilibrio</h1>
 
-<img src="https://picsum.photos/900/400?random=7">
+<div class="hero"></div>
 
-<p>Me di cuenta de que ya no jugaba por diversión, sino por costumbre. Me sentía obligado a conectarme todos los días.</p>
-
-<h2>El punto de quiebre</h2>
-<p>Una noche terminé una partida y no sentí nada. Solo cansancio. Ahí entendí que algo no estaba bien.</p>
-
-<h2>Lo que cambié</h2>
-<p>Establecí horarios claros. Eliminé juegos que me absorbían demasiado y volví a disfrutar solo algunos específicos.</p>
-
-<h2>El resultado</h2>
-<p>Hoy sigo jugando, pero también hago deporte y estudio con mejor enfoque. El juego volvió a ser entretenimiento, no necesidad.</p>
-
-<br>
-<a href="index.html">← Volver al inicio</a>
+<div class="card">
+<p>
+Carlos, de 15 años, comenzó jugando una hora diaria. Con el tiempo, el juego ocupó más espacio en su rutina y sus calificaciones bajaron. 
+Con apoyo familiar y acuerdos claros, logró organizar su tiempo, mantener sus estudios y seguir disfrutando los videojuegos sin excesos.
+</p>
+</div>
 
 </div>
 
-<script>
-function modo(){
-document.body.classList.toggle("light");
-}
-</script>
+<footer>
+Proyecto educativo 2026
+</footer>
 
 </body>
 </html>
