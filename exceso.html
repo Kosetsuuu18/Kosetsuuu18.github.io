@@ -3,57 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Señales de alerta</title>
 
 <style>
-*{box-sizing:border-box;}
-body{margin:0;font-family:'Segoe UI', sans-serif;background:#ffffff;color:#1a1a1a;}
-nav{position:fixed;top:0;width:100%;background:#ffffff;display:flex;justify-content:space-between;align-items:center;padding:20px 80px;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
-nav h2{margin:0;color:#2563eb;}
-nav a{text-decoration:none;color:#2563eb;font-weight:600;}
-.container{max-width:950px;margin:140px auto 100px auto;padding:20px;}
-h1{color:#2563eb;margin-bottom:40px;}
-.card{background:#ffffff;padding:40px;border-radius:22px;margin-bottom:40px;box-shadow:0 15px 40px rgba(0,0,0,0.07);line-height:1.7;}
-.card h2{margin-top:0;color:#1e40af;}
-footer{text-align:center;padding:40px;color:#888;}
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --text: #1a1a1a;
+  --bg: #ffffff;
+  --shadow: rgba(0,0,0,0.07);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+nav h2 {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-dark);
+}
+
+.container {
+  max-width: 950px;
+  margin: 6rem auto 4rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+section.card {
+  background: var(--bg);
+  padding: 2.5rem;
+  border-radius: 22px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 15px 40px var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px var(--shadow);
+}
+
+section.card h2 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: 0.9rem;
+}
 </style>
 </head>
 
 <body>
 
 <nav>
-<h2>Zona Gamer Consciente</h2>
-<a href="index.html">Inicio</a>
+  <h2>Zona Gamer Consciente</h2>
+  <a href="index.html">Inicio</a>
 </nav>
 
-<div class="container">
+<main class="container">
 
 <h1>Señales de que existe un exceso</h1>
 
-<div class="card">
-<h2>Pérdida de control</h2>
-<p>Cuando una persona intenta reducir el tiempo de juego pero no lo logra, puede ser una señal de dependencia. La dificultad para detenerse incluso sabiendo que hay responsabilidades pendientes es un indicador importante.</p>
-</div>
+<section class="card">
+  <h2>Pérdida de control</h2>
+  <p>Cuando una persona intenta reducir el tiempo de juego pero no lo logra, puede ser una señal de dependencia. La dificultad para detenerse incluso sabiendo que hay responsabilidades pendientes es un indicador importante.</p>
+</section>
 
-<div class="card">
-<h2>Irritabilidad</h2>
-<p>Enojarse cuando se limita el acceso al juego o cuando se pierde una partida puede reflejar un apego poco saludable. El entretenimiento no debería generar reacciones desproporcionadas.</p>
-</div>
+<section class="card">
+  <h2>Irritabilidad</h2>
+  <p>Enojarse cuando se limita el acceso al juego o cuando se pierde una partida puede reflejar un apego poco saludable. El entretenimiento no debería generar reacciones desproporcionadas.</p>
+</section>
 
-<div class="card">
-<h2>Descuidar responsabilidades</h2>
-<p>Faltar a compromisos escolares, familiares o personales por jugar indica que el equilibrio se ha perdido. La prioridad debe mantenerse en las obligaciones principales.</p>
-</div>
+<section class="card">
+  <h2>Descuidar responsabilidades</h2>
+  <p>Faltar a compromisos escolares, familiares o personales por jugar indica que el equilibrio se ha perdido. La prioridad debe mantenerse en las obligaciones principales.</p>
+</section>
 
-<div class="card">
-<h2>Mentir sobre el tiempo de uso</h2>
-<p>Ocultar o minimizar las horas dedicadas al juego suele ser señal de conciencia de un problema. La transparencia es clave para mantener relaciones sanas.</p>
-</div>
+<section class="card">
+  <h2>Mentir sobre el tiempo de uso</h2>
+  <p>Ocultar o minimizar las horas dedicadas al juego suele ser señal de conciencia de un problema. La transparencia es clave para mantener relaciones sanas.</p>
+</section>
 
-</div>
+</main>
 
 <footer>
-Proyecto educativo 2026
+  Proyecto educativo 2026
 </footer>
 
 </body>
