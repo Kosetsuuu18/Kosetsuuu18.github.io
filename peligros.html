@@ -3,48 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <title>Riesgos ocultos</title>
+
 <style>
+
+:root{
+--bg:#0f0f1a;
+--text:white;
+--primary:#00f7ff;
+--secondary:#ff00c8;
+--card:#1a1a2e;
+}
+
+.light{
+--bg:#f2f2f2;
+--text:#111;
+--primary:#0066ff;
+--secondary:#cc00aa;
+--card:white;
+}
+
 body{
-    font-family:'Segoe UI', sans-serif;
-    background:#0a0a12;
-    color:white;
-    padding:60px;
-    max-width:900px;
-    margin:auto;
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:0.4s;
 }
-h1{color:#00f7ff;}
-h2{color:#ff00c8;}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+backdrop-filter:blur(10px);
+}
+
+nav h2{
+color:var(--primary);
+margin:0;
+}
+
+nav button{
+background:var(--secondary);
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+color:white;
+}
+
+.container{
+max-width:900px;
+margin:120px auto;
+padding:20px;
+}
+
+h1{
+color:var(--primary);
+font-size:40px;
+}
+
+h2{
+color:var(--secondary);
+margin-top:40px;
+}
+
 img{
-    width:100%;
-    border-radius:15px;
-    margin:30px 0;
+width:100%;
+border-radius:20px;
+margin:30px 0;
 }
-a{color:#ff00c8;text-decoration:none;}
+
+a{
+color:var(--secondary);
+text-decoration:none;
+}
+
 </style>
 </head>
 <body>
 
+<nav>
+<h2>Zona Gamer Consciente</h2>
+<button onclick="modo()">Modo claro / oscuro</button>
+</nav>
+
+<div class="container">
+
 <h1>Los riesgos ocultos de los videojuegos</h1>
 
-<img src="https://images.unsplash.com/photo-1580327332925-a10e6cb11baa">
+<img src="https://picsum.photos/900/400?random=5">
+
+<p>No todos los videojuegos son negativos. El problema aparece cuando el uso deja de ser equilibrado y comienza a afectar otras áreas importantes de la vida.</p>
 
 <h2>1. Aislamiento social</h2>
-<p>Cuando el juego se vuelve prioridad absoluta, las relaciones reales pueden empezar a deteriorarse.</p>
+<p>Cuando el juego reemplaza completamente las interacciones reales, puede generar dificultad para comunicarse fuera del entorno digital.</p>
 
-<h2>2. Problemas de sueño</h2>
-<p>Jugar hasta tarde altera el ritmo natural del cuerpo y afecta la concentración.</p>
+<h2>2. Alteraciones del sueño</h2>
+<p>La luz azul y las partidas largas afectan el descanso, reduciendo concentración y energía.</p>
 
 <h2>3. Bajo rendimiento académico</h2>
-<p>Si el estudio pasa a segundo plano constantemente, el impacto aparece con el tiempo.</p>
+<p>Si las responsabilidades pierden prioridad, el impacto se refleja en resultados.</p>
 
-<h2>4. Dependencia emocional</h2>
-<p>El juego deja de ser diversión y se convierte en escape obligatorio.</p>
+<h2>4. Estrés competitivo</h2>
+<p>Algunos juegos generan presión constante por ganar, lo que puede aumentar ansiedad.</p>
 
-<h2>5. Ansiedad o frustración constante</h2>
-<p>Competir demasiado puede generar estrés innecesario.</p>
+<h2>5. Dependencia emocional</h2>
+<p>Cuando jugar deja de ser diversión y se convierte en necesidad, es momento de ajustar hábitos.</p>
 
 <br>
 <a href="index.html">← Volver al inicio</a>
+
+</div>
+
+<script>
+function modo(){
+document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
