@@ -2,42 +2,112 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>5 señales de exceso</title>
+<title>Señales de alerta</title>
+
 <style>
-body{
-    font-family:'Segoe UI', sans-serif;
-    background:#0a0a12;
-    color:white;
-    padding:60px;
-    max-width:900px;
-    margin:auto;
+:root{
+--bg:#0f0f1a;
+--text:white;
+--primary:#00f7ff;
+--secondary:#ff00c8;
 }
-h1{color:#00f7ff;}
-h2{color:#ff00c8;}
-a{color:#ff00c8;text-decoration:none;}
+
+.light{
+--bg:#f2f2f2;
+--text:#111;
+--primary:#0066ff;
+--secondary:#cc00aa;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:0.4s;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+nav h2{color:var(--primary);margin:0;}
+
+nav button{
+background:var(--secondary);
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+color:white;
+}
+
+.container{
+max-width:900px;
+margin:120px auto;
+padding:20px;
+}
+
+h1{color:var(--primary);}
+h2{color:var(--secondary);margin-top:40px;}
+
+img{
+width:100%;
+border-radius:20px;
+margin:30px 0;
+}
+
+a{color:var(--secondary);text-decoration:none;}
+
 </style>
 </head>
 <body>
 
-<h1>5 señales de que podrías estar jugando en exceso</h1>
+<nav>
+<h2>Zona Gamer Consciente</h2>
+<button onclick="modo()">Modo claro / oscuro</button>
+</nav>
+
+<div class="container">
+
+<h1>Señales de que el juego se está saliendo de control</h1>
+
+<img src="https://picsum.photos/900/400?random=6">
+
+<p>El problema no es jugar. El problema es perder el equilibrio. Estas señales pueden indicar que es momento de ajustar hábitos.</p>
 
 <h2>1. Pierdes la noción del tiempo</h2>
-<p>Empiezas diciendo “solo una partida más” y cuando te das cuenta han pasado horas. El tiempo deja de sentirse real.</p>
+<p>Dices “solo 10 minutos” y pasan horas sin darte cuenta.</p>
 
 <h2>2. Descuidas responsabilidades</h2>
-<p>Tareas, estudios o compromisos comienzan a quedar en segundo plano frente al juego.</p>
+<p>Tareas, estudios o compromisos empiezan a quedar en segundo plano.</p>
 
-<h2>3. Te molestas cuando no puedes jugar</h2>
-<p>Si sientes irritación o ansiedad cuando te interrumpen, puede haber dependencia emocional.</p>
+<h2>3. Te molestas cuando te interrumpen</h2>
+<p>Reaccionas con enojo si alguien te pide dejar de jugar.</p>
 
-<h2>4. Usas el juego como único escape</h2>
-<p>Todos necesitamos distraernos, pero si es la única forma de evitar problemas, es momento de reflexionar.</p>
+<h2>4. Afecta tu sueño</h2>
+<p>Te duermes tarde constantemente por seguir jugando.</p>
 
-<h2>5. Afecta tu sueño o salud</h2>
-<p>Dormir menos, comer mal o sentir cansancio constante son señales claras de desequilibrio.</p>
+<h2>5. Solo piensas en el juego</h2>
+<p>Incluso cuando no estás jugando, estás esperando volver.</p>
 
 <br>
 <a href="index.html">← Volver al inicio</a>
+
+</div>
+
+<script>
+function modo(){
+document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
