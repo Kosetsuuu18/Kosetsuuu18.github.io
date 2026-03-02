@@ -5,141 +5,104 @@
 <title>Zona Gamer Consciente</title>
 
 <style>
-
-:root{
---bg:#0f0f1a;
---text:white;
---primary:#00f7ff;
---secondary:#ff00c8;
---card:#1a1a2e;
-}
-
-.light{
---bg:#f2f2f2;
---text:#111;
---primary:#0066ff;
---secondary:#cc00aa;
---card:white;
-}
-
 body{
 margin:0;
 font-family:'Segoe UI', sans-serif;
-background:var(--bg);
-color:var(--text);
-transition:0.4s;
+background:#f9fafc;
+color:#222;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.8);
+background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-backdrop-filter:blur(10px);
+padding:20px 60px;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
 z-index:1000;
 }
 
 nav h2{
-color:var(--primary);
 margin:0;
-}
-
-nav button{
-background:var(--secondary);
-border:none;
-padding:8px 15px;
-border-radius:20px;
-cursor:pointer;
-color:white;
+color:#2563eb;
 }
 
 header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+margin-top:140px;
 text-align:center;
-padding:20px;
+padding:40px 20px;
 }
 
 header h1{
-font-size:60px;
-color:var(--primary);
+font-size:48px;
+color:#2563eb;
+margin-bottom:10px;
 }
 
 header p{
-font-size:22px;
-color:var(--secondary);
+font-size:20px;
+color:#555;
 }
 
-.section{
-padding:100px 20px;
+.container{
 max-width:1200px;
-margin:auto;
-}
-
-.cards{
-display:flex;
-gap:40px;
-flex-wrap:wrap;
-justify-content:center;
+margin:60px auto;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-background:var(--card);
-border-radius:20px;
-width:320px;
+background:white;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 overflow:hidden;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-transition:0.4s;
-opacity:0;
-transform:translateY(50px);
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
+transition:0.3s;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
 }
 
 .card img{
 width:100%;
-height:220px;
+height:200px;
 object-fit:cover;
 }
 
+.card-content{
+padding:25px;
+}
+
 .card h3{
-padding:20px;
-color:var(--primary);
+margin-top:0;
+color:#2563eb;
 }
 
 .card p{
-padding:0 20px 20px 20px;
+color:#555;
 }
 
 .card a{
-display:block;
-margin:20px;
-padding:10px;
-background:var(--secondary);
-text-align:center;
-border-radius:20px;
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#2563eb;
 color:white;
+border-radius:20px;
 text-decoration:none;
+font-size:14px;
 }
 
 footer{
 text-align:center;
 padding:40px;
-opacity:0.6;
+color:#777;
 }
 
 </style>
@@ -148,68 +111,56 @@ opacity:0.6;
 
 <nav>
 <h2>Zona Gamer Consciente</h2>
-<button onclick="modo()">Modo claro / oscuro</button>
 </nav>
 
 <header>
-<h1>Disfruta los videojuegos sin perder el control</h1>
-<p>Información real. Consejos prácticos. Experiencias honestas.</p>
+<h1>Videojuegos con equilibrio</h1>
+<p>Información, prevención y soluciones reales</p>
 </header>
 
-<div class="section">
-<div class="cards">
+<div class="container">
 
 <div class="card">
-<img src="https://picsum.photos/500/300?random=1">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Video_game_controller.jpg">
+<div class="card-content">
 <h3>Riesgos ocultos</h3>
-<p>Descubre cómo el exceso puede afectar tu mente, sueño y relaciones.</p>
+<p>Descubre cómo el uso excesivo puede afectar diferentes áreas de la vida.</p>
 <a href="peligros.html">Leer más</a>
 </div>
+</div>
 
 <div class="card">
-<img src="https://picsum.photos/500/300?random=2">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Playing_video_games.jpg">
+<div class="card-content">
 <h3>Señales de alerta</h3>
-<p>Aprende a identificar cuándo el juego deja de ser saludable.</p>
+<p>Aprende a detectar cuándo el juego pierde el equilibrio.</p>
 <a href="exceso.html">Leer más</a>
 </div>
+</div>
 
 <div class="card">
-<img src="https://picsum.photos/500/300?random=3">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Gamer_playing.jpg">
+<div class="card-content">
 <h3>Historia real</h3>
-<p>Un gamer que recuperó el equilibrio sin abandonar su pasión.</p>
+<p>Un caso de cómo recuperar el control sin abandonar la pasión.</p>
 <a href="historia.html">Leer más</a>
 </div>
+</div>
 
 <div class="card">
-<img src="https://picsum.photos/500/300?random=4">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Family_playing_video_game_together.jpg">
+<div class="card-content">
 <h3>Cómo solucionarlo</h3>
-<p>Estrategias reales para padres sin prohibiciones extremas.</p>
+<p>Estrategias prácticas para padres sin prohibiciones extremas.</p>
 <a href="solucion.html">Leer más</a>
 </div>
-
 </div>
+
 </div>
 
 <footer>
-Proyecto personal 2026 | Blog gamer responsable
+Proyecto educativo 2026
 </footer>
-
-<script>
-
-function modo(){
-document.body.classList.toggle("light");
-}
-
-window.addEventListener("scroll",()=>{
-document.querySelectorAll(".card").forEach(card=>{
-const top=card.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-card.classList.add("show");
-}
-});
-});
-
-</script>
 
 </body>
 </html>
