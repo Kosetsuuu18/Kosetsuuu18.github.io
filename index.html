@@ -1,91 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZONA GAMER CONSCIENTE // NIGHT CITY EDITION</title>
-  <meta name="description" content="Equilibrio en el chrome: gaming consciente en México. Química cerebral, salud mental, relaciones reales, soluciones sin prohibir videojuegos. Level up tu vida sin perder el grind.">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&family=VT323&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZONA GAMER CONSCIENTE // NIGHT CITY 2026</title>
+  <meta name="description" content="Equilibrio en el chrome: gaming consciente en México. Química cerebral, salud mental, relaciones reales, soluciones sin prohibir videojuegos. Level up tu vida sin perder el grind." />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=VT323&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --cyan: #00ffff;
+      --cian: #00ffff;
       --magenta: #ff00ff;
-      --yellow: #ffff00;
-      --dark: #000814;
-      --card: rgba(0, 0, 20, 0.75);
-      --text: #e0ffff;
-      --glitch: #ff0044;
+      --amarillo: #ffff00;
+      --rojo-glitch: #ff0044;
+      --fondo-oscuro: #000814;
+      --texto-neon: #e0ffff;
+      --tarjeta: rgba(0, 0, 20, 0.75);
     }
+
     * { margin:0; padding:0; box-sizing:border-box; }
+
     body {
-      font-family: 'Rajdhani', sans-serif;
-      background: var(--dark) url('https://wallpapers.com/images/hd/rainy-night-in-the-city-of-cyberpunk-0o6ajn40m3gc2eto.jpg') center/cover fixed no-repeat;
-      color: var(--text);
+      font-family: 'VT323', monospace;
+      background: var(--fondo-oscuro) url('https://images.alphacoders.com/135/1356630.jpg') center/cover fixed no-repeat;
+      color: var(--texto-neon);
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
     }
+
     body::before {
       content: '';
-      position: fixed; inset: 0; pointer-events: none; z-index: -1;
-      background: linear-gradient(to bottom, rgba(0,255,255,0.1), rgba(255,0,255,0.08));
-      animation: rainGlitch 12s infinite linear;
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background: linear-gradient(to bottom, rgba(0,255,255,0.12), rgba(255,0,255,0.08));
+      animation: lluvia-glitch 14s infinite linear;
     }
-    @keyframes rainGlitch {
-      0% { transform: translateY(0); opacity: 0.7; }
-      50% { transform: translateY(-30px); opacity: 0.5; }
-      100% { transform: translateY(0); opacity: 0.7; }
+
+    @keyframes lluvia-glitch {
+      0% { transform: translateY(0); opacity: 0.8; }
+      50% { transform: translateY(-40px); opacity: 0.5; }
+      100% { transform: translateY(0); opacity: 0.8; }
     }
 
     header {
-      position: sticky; top:0; z-index:100;
-      background: rgba(0,0,20,0.9);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,0,20,0.92);
       backdrop-filter: blur(15px);
-      border-bottom: 3px solid var(--cyan);
-      padding: 1.2rem 5%;
-      box-shadow: 0 4px 25px rgba(0,255,255,0.4);
+      border-bottom: 4px solid var(--cian);
+      padding: 1.5rem 6%;
+      box-shadow: 0 6px 30px rgba(0,255,255,0.4);
     }
+
     nav {
-      max-width: 1400px; margin: auto;
-      display: flex; justify-content: space-between; align-items: center;
+      max-width: 1600px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
+
     .logo {
-      font-family: 'VT323', monospace;
-      font-size: 3rem;
-      color: var(--cyan);
-      text-shadow: 0 0 12px var(--cyan), 0 0 25px var(--magenta);
-      animation: glitchText 5s infinite;
+      font-family: 'VT323';
+      font-size: 3.2rem;
+      color: var(--cian);
+      text-shadow: 0 0 15px var(--cian), 0 0 30px var(--magenta);
+      animation: glitch-logo 6s infinite;
     }
-    @keyframes glitchText {
-      0%,100% { text-shadow: 3px 0 var(--glitch), -3px 0 var(--cyan); }
-      20% { text-shadow: -3px -3px var(--magenta), 3px 3px var(--yellow); }
-      40% { text-shadow: 3px -3px var(--cyan), -3px 3px var(--glitch); }
+
+    @keyframes glitch-logo {
+      0%, 100% { text-shadow: 4px 0 var(--rojo-glitch), -4px 0 var(--cian); }
+      20% { text-shadow: -4px -4px var(--magenta), 4px 4px var(--amarillo); }
+      40% { text-shadow: 4px -4px var(--cian), -4px 4px var(--rojo-glitch); }
     }
 
     .nav-links a {
-      color: var(--text); margin: 0 1.8rem; text-decoration: none; font-weight: 700;
-      position: relative; transition: 0.4s;
+      color: var(--texto-neon);
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-size: 1.5rem;
+      position: relative;
+      transition: 0.4s;
     }
-    .nav-links a:hover {
-      color: var(--yellow);
-      text-shadow: 0 0 20px var(--yellow);
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -8px; left: 0; width: 0; height: 4px;
-      background: var(--magenta); transition: 0.5s;
-    }
-    .nav-links a:hover::after { width: 100%; }
 
-    .toggle-btn {
+    .nav-links a:hover {
+      color: var(--amarillo);
+      text-shadow: 0 0 25px var(--amarillo);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0;
+      height: 4px;
       background: var(--magenta);
-      color: #000;
-      padding: 0.7rem 1.4rem;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-family: 'VT323';
-      font-size: 1.3rem;
-      box-shadow: 0 0 20px var(--magenta);
+      transition: width 0.5s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     .hero {
@@ -94,79 +116,92 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(rgba(0,0,20,0.75), rgba(0,0,20,0.95)), url('https://wallpapers.com/images/hd/cyberpunk-1920x1080-epzmmhi8mco446zt.jpg') center/cover;
+      background: linear-gradient(rgba(0,0,20,0.8), rgba(0,0,20,0.95)), url('https://images.alphacoders.com/135/1356630.jpg') center/cover;
       position: relative;
     }
+
     h1 {
       font-family: 'VT323';
-      font-size: clamp(4.5rem, 12vw, 10rem);
-      color: var(--cyan);
-      text-shadow: 0 0 25px var(--cyan), 0 0 50px var(--magenta), 0 0 75px var(--yellow);
-      animation: glitch 4s infinite;
+      font-size: clamp(5rem, 14vw, 12rem);
+      color: var(--cian);
+      text-shadow: 0 0 30px var(--cian), 0 0 60px var(--magenta), 0 0 90px var(--amarillo);
+      animation: glitch-titulo 5s infinite;
     }
-    @keyframes glitch {
+
+    @keyframes glitch-titulo {
       0% { transform: translate(0); }
-      20% { transform: translate(-8px, 8px); }
-      40% { transform: translate(8px, -8px); }
-      60% { transform: translate(-8px, -8px); }
-      80% { transform: translate(8px, 8px); }
+      20% { transform: translate(-10px, 10px); }
+      40% { transform: translate(10px, -10px); }
+      60% { transform: translate(-10px, -10px); }
+      80% { transform: translate(10px, 10px); }
       100% { transform: translate(0); }
     }
 
-    section { padding: 7rem 5%; max-width: 1400px; margin: auto; }
+    section {
+      padding: 8rem 6%;
+      max-width: 1600px;
+      margin: auto;
+    }
+
     h2 {
       font-family: 'VT323';
-      font-size: 4.5rem;
+      font-size: 5rem;
       color: var(--magenta);
       text-align: center;
       margin-bottom: 4rem;
-      text-shadow: 0 0 40px var(--magenta);
+      text-shadow: 0 0 50px var(--magenta);
     }
 
     .card {
-      background: var(--card);
-      border: 3px solid var(--cyan);
-      border-radius: 20px;
-      padding: 3rem;
-      margin: 2.5rem 0;
-      box-shadow: 0 0 40px rgba(0,255,255,0.3);
-      transition: all 0.5s;
-      backdrop-filter: blur(8px);
-    }
-    .card:hover {
-      transform: translateY(-20px);
-      box-shadow: 0 0 80px var(--cyan), inset 0 0 30px var(--magenta);
-      border-color: var(--yellow);
+      background: var(--tarjeta);
+      border: 4px solid var(--cian);
+      border-radius: 25px;
+      padding: 3.5rem;
+      margin: 3rem 0;
+      box-shadow: 0 0 50px rgba(0,255,255,0.4);
+      transition: all 0.6s;
+      backdrop-filter: blur(10px);
     }
 
-    .internal-btn {
-      background: linear-gradient(45deg, var(--cyan), var(--magenta), var(--yellow));
+    .card:hover {
+      transform: translateY(-25px);
+      box-shadow: 0 0 100px var(--cian), inset 0 0 40px var(--magenta);
+      border-color: var(--amarillo);
+    }
+
+    .btn-hack {
+      background: linear-gradient(45deg, var(--cian), var(--magenta), var(--amarillo));
       color: #000;
-      padding: 1.2rem 3rem;
+      padding: 1.5rem 3.5rem;
       border: none;
-      border-radius: 60px;
+      border-radius: 70px;
       cursor: pointer;
       font-family: 'VT323';
-      font-size: 1.6rem;
-      margin: 2rem 0;
-      box-shadow: 0 0 30px var(--cyan);
-      transition: 0.4s;
+      font-size: 2rem;
+      margin: 2.5rem auto;
+      display: block;
+      box-shadow: 0 0 40px var(--cian);
+      transition: 0.5s;
     }
-    .internal-btn:hover {
-      box-shadow: 0 0 60px var(--magenta);
+
+    .btn-hack:hover {
+      box-shadow: 0 0 80px var(--magenta);
       transform: scale(1.15);
     }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 3rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3rem;
+    }
 
     footer {
       text-align: center;
-      padding: 5rem 5%;
-      background: rgba(0,0,0,0.95);
-      border-top: 5px solid var(--magenta);
-      color: #ccc;
-      font-family: 'VT323';
-      font-size: 1.6rem;
+      padding: 6rem 6%;
+      background: rgba(0,0,0,0.98);
+      border-top: 6px solid var(--magenta);
+      color: #aaa;
+      font-size: 2rem;
     }
   </style>
 </head>
@@ -176,77 +211,103 @@
     <nav>
       <div class="logo">ZONA GAMER CONSCIENTE // NIGHT CITY</div>
       <div class="nav-links">
-        <a href="#hero">INICIO</a>
-        <a href="#quimica-gaming">QUÍMICA</a>
-        <a href="#test">TEST RIESGO</a>
+        <a href="#inicio">INICIO</a>
+        <a href="#por-que-jugamos">¿POR QUÉ JUGAMOS?</a>
+        <a href="#quimica">QUÍMICA CEREBRAL</a>
+        <a href="#salud-mental">SALUD MENTAL</a>
+        <a href="#cuerpo">CUERPO Y SUEÑO</a>
+        <a href="#relaciones">RELACIONES REALES</a>
+        <a href="#redes">REDES Y STREAMING</a>
+        <a href="#mitos">MITOS Y VERDADES</a>
+        <a href="#beneficios">BENEFICIOS REALES</a>
         <a href="#juegos-sanos">JUEGOS SANOS</a>
-        <a href="#solucion">SOLUCIONES</a>
-        <!-- Puedes agregar más links si quieres expandir -->
+        <a href="#soluciones">SOLUCIONES</a>
       </div>
-      <button class="toggle-btn" onclick="toggleMode()">ARASAKA / NIGHT CITY</button>
     </nav>
   </header>
 
-  <section id="hero" class="hero">
+  <section id="inicio" class="hero">
     <div>
-      <h1>NO TE DEJES CHROMEAR POR EL GRIND</h1>
-      <p style="font-size:2.2rem; max-width:1100px; margin:3rem auto; text-shadow:0 0 20px var(--cyan);">
-        En México 2026, 23.2% de la población (21 millones) juega videojuegos.<br>
-        Solo 0.9% cumple criterios de trastorno (1.2% adolescentes, 0.7% adultos – ENCODAT 2025).<br>
-        El gaming es parte normal de la vida – no hay que prohibirlo ni eliminarlo.<br>
-        El chiste es controlarlo: disfrutar sin que te controle. Equilibrio real, sin perder el chrome.
+      <h1>NO DEJES QUE EL GRIND TE FLATLINE</h1>
+      <p style="font-size:2.5rem; max-width:1200px; margin:3.5rem auto; text-shadow:0 0 25px var(--cian);">
+        En México 2026, 21 millones de personas jugamos videojuegos.<br>
+        Solo 0.9% tiene trastorno real (ENCODAT 2025).<br>
+        El gaming es parte de la vida – no hay que prohibirlo.<br>
+        El hack es controlarlo: disfrutar sin que te controle.
       </p>
-      <button class="internal-btn" onclick="scrollToSection('#solucion')">HACK TU EQUILIBRIO</button>
+      <button class="btn-hack" onclick="scrollToSection('#por-que-jugamos')">¿POR QUÉ JUGAMOS?</button>
     </div>
   </section>
 
-  <section id="quimica-gaming">
-    <h2>QUÍMICA DEL GRIND: DOPAMINA COMO EN UN GIG</h2>
+  <section id="por-que-jugamos">
+    <h2>¿POR QUÉ JUGAMOS? – PSICOLOGÍA DEL GRIND</h2>
     <div class="card">
-      <p>El gaming libera dopamina como un loot box o un beso: rush instantáneo. En títulos como Valorant o Fortnite, cada victoria o kill es un high químico. Pero el chrome no para – actualizaciones reinician el ciclo. Estudios WHO 2026: trastorno en ~3% gamers globales, México alto en horas por tráfico digital. Oxitocina en co-op, serotonina baja = obsesión. No es malo jugar, es malo perder el control.</p>
-      <button class="internal-btn" onclick="scrollToSection('#test')">RUN THE TEST – ¿ESTÁS CHROMED?</button>
-    </div>
-  </section>
+      <p>Nuestro cerebro está cableado para buscar recompensas, desafíos y conexiones. Los videojuegos son un hack brutal para eso.</p>
 
-  <!-- Test de riesgo (copia el de versiones anteriores o mantén simple) -->
+      <div class="grid">
+        <div class="card">
+          <h3>Competencia y Maestría</h3>
+          <p>Queremos sentirnos buenos en algo. Cada kill, cada boss, cada build perfecta libera dopamina. Nos hace sentir que progresamos. Beneficio: mejora perseverancia y autoestima.</p>
+        </div>
 
-  <section id="juegos-sanos">
-    <h2>JUEGOS SANOS – RECOMENDADOS PARA EQUILIBRIO</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Stardew Valley</h3>
-        <p>Granja cozy, relax total sin presión. Ideal para sesiones cortas, fomenta paciencia y creatividad.</p>
-        <a href="https://store.steampowered.com/app/413150/Stardew_Valley/" target="_blank" style="color:var(--cyan);">Accede aquí</a>
+        <div class="card">
+          <h3>Autonomía total</h3>
+          <p>Tú decides tu camino, tu build, tus elecciones morales. No hay jefe que te ordene. Satisfaces la necesidad de control sobre tu destino.</p>
+        </div>
+
+        <div class="card">
+          <h3>Conexión real o virtual</h3>
+          <p>Jugar con cuates libera oxitocina. Clanes, squads, discords – muchos usan gaming para socializar. Reduce soledad y mejora habilidades sociales.</p>
+        </div>
+
+        <div class="card">
+          <h3>Escape y fantasía</h3>
+          <p>La vida real a veces es pesada. Los juegos ofrecen mundos donde eres héroe o explorador. Es humano recargar así – el problema es cuando se convierte en huida permanente.</p>
+        </div>
+
+        <div class="card">
+          <h3>Exploración y creatividad</h3>
+          <p>Curiosidad innata: descubrir mundos nuevos (Minecraft, No Man's Sky, Zelda). Estimula pensamiento lateral y aprendizaje constante.</p>
+        </div>
       </div>
-      <!-- Agrega más de los 10 que tenías antes, o dime si quieres nuevos -->
+
+      <p style="text-align:center; margin-top:4rem; font-size:2.2rem;">
+        Jugamos porque los videojuegos satisfacen necesidades básicas del ser humano.<br>
+        No es malo – es natural. El chiste es no dejar que el sistema te hackee.
+      </p>
+
+      <button class="btn-hack" onclick="scrollToSection('#quimica')">SIGUIENTE: LA QUÍMICA CEREBRAL</button>
     </div>
-    <p style="text-align:center; margin-top:3rem; font-size:1.5rem;">Juega estos sin culpa – son para desconectar, no para atraparte.</p>
   </section>
 
-  <section id="solucion">
-    <h2>SOLUCIONES REALES – SIN PROHIBIR NADA</h2>
+  <section id="quimica">
+    <h2>QUÍMICA CEREBRAL – DOPAMINA COMO EN UN GIG</h2>
     <div class="card">
-      <p>El objetivo no es eliminar videojuegos de tu vida – son diversión, social, creatividad. El pedo es que no te dominen. En México, con millones jugando sano, aquí van soluciones prácticas para balance:</p>
+      <p>Cada victoria, loot o kill es un rush de dopamina. Similar al enamoramiento o una apuesta ganada. Juegos como Valorant o Fortnite diseñan loops infinitos: actualizaciones constantes reinician el ciclo. Oxitocina en co-op, serotonina baja cuando pierdes ranking. El cerebro se acostumbra y pide más. Pero jugar con conciencia es posible – no hay que eliminar el chrome, solo controlarlo.</p>
+    </div>
+  </section>
+
+  <!-- Aquí puedes seguir añadiendo las otras secciones que ya tenías o nuevas -->
+
+  <section id="soluciones">
+    <h2>SOLUCIONES – SIN PROHIBIR NADA</h2>
+    <div class="card">
+      <p>No se trata de dejar de jugar para siempre. Se trata de hackear el equilibrio para que sigas disfrutando sin que te domine.</p>
       
-      <h3 style="color:var(--cyan); margin:2rem 0 1rem;">Paso 1: Mide sin drama</h3>
-      <p>Registra horas reales (Screen Time o apps). Muchos descubren 6-8h sin darse cuenta. Datos ENCODAT: mayoría juega recreativo sin problema.</p>
-      
-      <h3 style="color:var(--cyan); margin:2rem 0 1rem;">Paso 2: Regla 80/20 – Juega, pero prioriza</h3>
-      <p>80% vida offline (estudio/trabajo, deporte, amigos, familia), 20% gaming. Ej: 4h libres = ~48 min de juego. Usa alarmas y bloqueadores (Freedom, Cold Turkey).</p>
-      
-      <h3 style="color:var(--cyan); margin:2rem 0 1rem;">Paso 3: Rutina anti-chrome</h3>
-      <p>Gym o deporte primero (dopamina sana). Estudio/trabajo antes de prender consola. Breaks cada 45-60 min (regla 20-20-20 para ojos). Duerme 7-9h (pantallas off 1h antes).</p>
-      
-      <h3 style="color:var(--cyan); margin:2rem 0 1rem;">Beneficios timeline – México real</h3>
-      <ul style="list-style:none; padding-left:0;">
-        <li>Día 3-7: Más energía, menos ansiedad, mejor sueño.</li>
-        <li>Semana 2-4: Concentración up, notas/trabajo mejoran.</li>
-        <li>Mes 1-3: Confianza y relaciones reales suben.</li>
-        <li>Mes 6+: Juegas por gusto, no por escape – vida real es el verdadero endgame.</li>
+      <ul style="font-size:1.8rem; list-style:none; padding:0;">
+        <li>→ Mide tus horas reales (Screen Time, RescueTime)</li>
+        <li>→ Regla 80/20: 80% vida offline, 20% gaming</li>
+        <li>→ Rutina: deporte/estudio primero, juego después</li>
+        <li>→ Breaks cada 45-60 min (regla 20-20-20 para ojos)</li>
+        <li>→ Apps bloqueadoras: Freedom, Cold Turkey</li>
+        <li>→ Duerme 7-9h (pantallas off 1h antes)</li>
+        <li>→ Juega con cuates en persona también</li>
       </ul>
-      
-      <p>Recaídas pasan – no te castigues, ajusta. Recursos México: líneas de ayuda salud mental (IMSS, SSA), grupos como Jugadores Anónimos o comunidades online. No necesitas dejar todo – solo hackear el equilibrio.</p>
-      <button class="internal-btn" onclick="scrollToSection('#juegos-sanos')">VE JUEGOS SANOS PARA EMPEZAR</button>
+
+      <p style="margin-top:3rem; font-size:2rem; text-align:center;">
+        El gaming puede ser parte sana de tu vida en México.<br>
+        Controla el chrome – no dejes que te controle.
+      </p>
     </div>
   </section>
 
@@ -255,17 +316,9 @@
   </footer>
 
   <script>
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
-      localStorage.setItem('mode', document.body.classList.contains('light-mode') ? 'arasaka' : 'nightcity');
-    }
-    if(localStorage.getItem('mode') === 'arasaka') toggleMode();
-
     function scrollToSection(id) {
-      document.querySelector(id).scrollIntoView({behavior: 'smooth'});
+      document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
     }
-
-    // Agrega tus funciones de test/quiz aquí si las quieres mantener
   </script>
 </body>
 </html>
