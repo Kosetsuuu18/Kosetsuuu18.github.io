@@ -3,53 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <title>Cómo solucionarlo</title>
+
 <style>
-body{
-font-family:'Segoe UI', sans-serif;
-background:#0f0f1a;
-color:white;
-padding:60px;
-max-width:900px;
-margin:auto;
+:root{
+--bg:#0f0f1a;
+--text:white;
+--primary:#00f7ff;
+--secondary:#ff00c8;
 }
-h1{color:#00f7ff;}
-h2{color:#ff00c8;}
+
+.light{
+--bg:#f2f2f2;
+--text:#111;
+--primary:#0066ff;
+--secondary:#cc00aa;
+}
+
+body{
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:0.4s;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+nav h2{color:var(--primary);margin:0;}
+
+nav button{
+background:var(--secondary);
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+color:white;
+}
+
+.container{
+max-width:900px;
+margin:120px auto;
+padding:20px;
+}
+
+h1{color:var(--primary);}
+h2{color:var(--secondary);margin-top:40px;}
+
 img{
 width:100%;
-border-radius:15px;
+border-radius:20px;
 margin:30px 0;
 }
-a{
-color:#ff00c8;
-text-decoration:none;
-}
+
+a{color:var(--secondary);text-decoration:none;}
+
 </style>
 </head>
 <body>
 
-<h1>Cómo ayudar sin prohibir</h1>
+<nav>
+<h2>Zona Gamer Consciente</h2>
+<button onclick="modo()">Modo claro / oscuro</button>
+</nav>
 
-<img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+<div class="container">
 
-<p>Prohibir o quitar el teléfono rara vez soluciona el problema. Muchas veces solo genera más rebeldía o que el uso se vuelva oculto.</p>
+<h1>Cómo ayudar sin prohibir ni quitar el teléfono</h1>
 
-<h2>1. Establecer horarios claros</h2>
-<p>No se trata de eliminar el juego, sino de estructurarlo. Por ejemplo: después de tareas y responsabilidades.</p>
+<img src="https://picsum.photos/900/400?random=8">
 
-<h2>2. Interesarse por lo que juegan</h2>
-<p>Preguntar qué juego es, qué les gusta, con quién juegan. Cuando el adulto muestra interés, se abre comunicación.</p>
+<p>Prohibir no educa. Enseñar equilibrio sí.</p>
 
-<h2>3. Fomentar actividades alternativas atractivas</h2>
-<p>No basta con decir “haz otra cosa”. Debe existir algo interesante fuera de la pantalla: deporte, música, proyectos creativos.</p>
+<h2>1. Establecer acuerdos</h2>
+<p>Crear horarios claros y realistas en conjunto.</p>
 
-<h2>4. Jugar juntos ocasionalmente</h2>
-<p>Compartir una partida puede transformar el conflicto en conexión.</p>
+<h2>2. Mostrar interés</h2>
+<p>Preguntar qué juegan y por qué les gusta.</p>
+
+<h2>3. Fomentar alternativas atractivas</h2>
+<p>No basta con decir “sal afuera”, debe haber algo interesante que hacer.</p>
+
+<h2>4. Dar ejemplo</h2>
+<p>El equilibrio empieza en casa.</p>
 
 <h2>5. Enseñar autorregulación</h2>
-<p>El objetivo no es controlar para siempre, sino enseñar a equilibrar. Eso sí es educación digital real.</p>
+<p>El objetivo es que aprendan a controlarse solos en el futuro.</p>
 
 <br>
 <a href="index.html">← Volver al inicio</a>
+
+</div>
+
+<script>
+function modo(){
+document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
