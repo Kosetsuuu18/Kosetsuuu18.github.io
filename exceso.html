@@ -5,66 +5,81 @@
 <title>Señales de alerta</title>
 
 <style>
-:root{
---bg:#0f0f1a;
---text:white;
---primary:#00f7ff;
---secondary:#ff00c8;
-}
-
-.light{
---bg:#f2f2f2;
---text:#111;
---primary:#0066ff;
---secondary:#cc00aa;
-}
-
 body{
 margin:0;
 font-family:'Segoe UI', sans-serif;
-background:var(--bg);
-color:var(--text);
-transition:0.4s;
+background:#f9fafc;
+color:#222;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.8);
+background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
+padding:20px 60px;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+z-index:1000;
 }
 
-nav h2{color:var(--primary);margin:0;}
+nav h2{
+margin:0;
+color:#2563eb;
+}
 
-nav button{
-background:var(--secondary);
-border:none;
-padding:8px 15px;
-border-radius:20px;
-cursor:pointer;
-color:white;
+nav a{
+text-decoration:none;
+color:#2563eb;
+font-weight:bold;
 }
 
 .container{
-max-width:900px;
-margin:120px auto;
+max-width:1000px;
+margin:140px auto 80px auto;
 padding:20px;
 }
 
-h1{color:var(--primary);}
-h2{color:var(--secondary);margin-top:40px;}
-
-img{
+.hero{
 width:100%;
+height:350px;
+background:url('https://upload.wikimedia.org/wikipedia/commons/3/33/Playing_video_games.jpg') center/cover no-repeat;
 border-radius:20px;
-margin:30px 0;
+margin-bottom:50px;
 }
 
-a{color:var(--secondary);text-decoration:none;}
+h1{
+font-size:42px;
+color:#2563eb;
+margin-bottom:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+
+.card h2{
+margin-top:0;
+color:#e11d48;
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#777;
+}
 
 </style>
 </head>
@@ -72,42 +87,40 @@ a{color:var(--secondary);text-decoration:none;}
 
 <nav>
 <h2>Zona Gamer Consciente</h2>
-<button onclick="modo()">Modo claro / oscuro</button>
+<a href="index.html">Inicio</a>
 </nav>
 
 <div class="container">
 
-<h1>Señales de que el juego se está saliendo de control</h1>
+<h1>Señales de que hay exceso</h1>
 
-<img src="https://picsum.photos/900/400?random=6">
+<div class="hero"></div>
 
-<p>El problema no es jugar. El problema es perder el equilibrio. Estas señales pueden indicar que es momento de ajustar hábitos.</p>
+<div class="card">
+<h2>Pérdida de control</h2>
+<p>Dificultad para dejar de jugar incluso cuando hay otras responsabilidades.</p>
+</div>
 
-<h2>1. Pierdes la noción del tiempo</h2>
-<p>Dices “solo 10 minutos” y pasan horas sin darte cuenta.</p>
+<div class="card">
+<h2>Irritabilidad</h2>
+<p>Enojo o frustración cuando se limita el tiempo de juego.</p>
+</div>
 
-<h2>2. Descuidas responsabilidades</h2>
-<p>Tareas, estudios o compromisos empiezan a quedar en segundo plano.</p>
+<div class="card">
+<h2>Descuidar actividades</h2>
+<p>Abandonar hobbies, estudios o relaciones por pasar más tiempo jugando.</p>
+</div>
 
-<h2>3. Te molestas cuando te interrumpen</h2>
-<p>Reaccionas con enojo si alguien te pide dejar de jugar.</p>
-
-<h2>4. Afecta tu sueño</h2>
-<p>Te duermes tarde constantemente por seguir jugando.</p>
-
-<h2>5. Solo piensas en el juego</h2>
-<p>Incluso cuando no estás jugando, estás esperando volver.</p>
-
-<br>
-<a href="index.html">← Volver al inicio</a>
+<div class="card">
+<h2>Mentir sobre el tiempo</h2>
+<p>Ocultar o minimizar la cantidad de horas dedicadas a videojuegos.</p>
+</div>
 
 </div>
 
-<script>
-function modo(){
-document.body.classList.toggle("light");
-}
-</script>
+<footer>
+Proyecto educativo 2026
+</footer>
 
 </body>
 </html>
