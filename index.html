@@ -1,178 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="color-scheme" content="light only">
-<title>Zona Gamer Consciente</title>
-
-<style>
-*{box-sizing:border-box;}
-
-body{
-margin:0;
-font-family:'Segoe UI', sans-serif;
-background:#ffffff;
-color:#1a1a1a;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#ffffff;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 80px;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
-z-index:1000;
-}
-
-nav h2{
-margin:0;
-color:#2563eb;
-font-weight:600;
-}
-
-header{
-margin-top:140px;
-text-align:center;
-padding:40px 20px;
-}
-
-header h1{
-font-size:48px;
-color:#2563eb;
-margin-bottom:15px;
-}
-
-header p{
-font-size:18px;
-color:#555;
-}
-
-.container{
-max-width:1200px;
-margin:60px auto 100px auto;
-padding:20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
-}
-
-.card{
-background:#ffffff;
-border-radius:22px;
-box-shadow:0 15px 40px rgba(0,0,0,0.07);
-overflow:hidden;
-transition:all 0.3s ease;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 25px 50px rgba(0,0,0,0.12);
-}
-
-.card img{
-width:100%;
-height:230px;
-object-fit:cover;
-display:block;
-}
-
-.card-content{
-padding:30px;
-}
-
-.card h3{
-margin-top:0;
-color:#2563eb;
-font-size:20px;
-}
-
-.card p{
-color:#555;
-}
-
-.card a{
-display:inline-block;
-margin-top:15px;
-padding:12px 22px;
-background:#2563eb;
-color:white;
-border-radius:30px;
-text-decoration:none;
-font-size:14px;
-transition:0.2s;
-}
-
-.card a:hover{
-background:#1e40af;
-}
-
-footer{
-text-align:center;
-padding:40px;
-color:#888;
-font-size:14px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona Gamer Consciente</title>
+  <!-- Pega aquí el CSS base de arriba -->
 </head>
-
 <body>
 
-<nav>
-<h2>Zona Gamer Consciente</h2>
-</nav>
+  <header>
+    <h1>Zona Gamer Consciente</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="historia.html">Historia</a>
+      <a href="exceso.html">Señales</a>
+      <a href="peligros.html">Riesgos</a>
+      <a href="solucion.html">Soluciones</a>
+    </nav>
+  </header>
 
-<header>
-<h1>Videojuegos con equilibrio</h1>
-<p>Información, prevención y soluciones reales</p>
-</header>
+  <main>
+    <h2>Videojuegos con equilibrio</h2>
+    <p>Información real para gamers en México. Detecta el exceso y mantén el balance.</p>
 
-<div class="container">
+    <div class="card">
+      <h3>Historia real</h3>
+      <p>Un joven recuperó el control... <a href="historia.html">Leer más</a></p>
+    </div>
 
-<div class="card">
-<img src="https://picsum.photos/600/400?10">
-<div class="card-content">
-<h3>Riesgos ocultos</h3>
-<p>Consecuencias del uso excesivo.</p>
-<a href="peligros.html">Explorar</a>
-</div>
-</div>
+    <div class="card">
+      <h3>Señales de alerta</h3>
+      <p>¿Estás perdiendo control? <a href="exceso.html">Ver señales</a></p>
+    </div>
 
-<div class="card">
-<img src="https://picsum.photos/600/400?11">
-<div class="card-content">
-<h3>Señales de alerta</h3>
-<p>Cómo detectar cuando hay exceso.</p>
-<a href="exceso.html">Explorar</a>
-</div>
-</div>
+    <div class="card">
+      <h3>Riesgos ocultos</h3>
+      <p>Sueño jodido, notas bajas... <a href="peligros.html">Conoce los peligros</a></p>
+    </div>
 
-<div class="card">
-<img src="https://picsum.photos/600/400?12">
-<div class="card-content">
-<h3>Historia real</h3>
-<p>Un caso de recuperación del equilibrio.</p>
-<a href="historia.html">Explorar</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/600/400?13">
-<div class="card-content">
-<h3>Cómo solucionarlo</h3>
-<p>Estrategias prácticas para padres.</p>
-<a href="solucion.html">Explorar</a>
-</div>
-</div>
-
-</div>
-
-<footer>
-Proyecto educativo 2026
-</footer>
+    <div class="card">
+      <h3>Cómo solucionarlo</h3>
+      <p>Horarios, deporte, comunicación... <a href="solucion.html">Ver soluciones</a></p>
+    </div>
+  </main>
 
 </body>
 </html>
