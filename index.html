@@ -2,160 +2,125 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Entre Pixeles y Realidad</title>
-
+<title>Zona Gamer Consciente</title>
 <style>
 
 body{
     margin:0;
     font-family:'Segoe UI', sans-serif;
-    background:#0a0a12;
+    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
     color:white;
 }
 
-/* PORTADA */
-.hero{
-    height:90vh;
-    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1605902711622-cfb43c44367f');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+header{
     text-align:center;
+    padding:60px 20px;
 }
 
-.hero h1{
-    font-size:3.8em;
-    margin:0;
+header h1{
+    font-size:50px;
     color:#00f7ff;
+    animation: aparecer 1.5s ease-in-out;
 }
 
-.hero p{
-    font-size:1.3em;
-    max-width:700px;
-    color:#ffffffcc;
-}
-
-/* SECCIÓN */
-.section{
-    max-width:1200px;
-    margin:auto;
-    padding:80px 20px;
-}
-
-.section h2{
-    text-align:center;
-    font-size:2.2em;
-    margin-bottom:50px;
+header p{
+    font-size:20px;
     color:#ff00c8;
 }
 
-/* TARJETAS */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+.container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    padding:40px;
 }
 
 .card{
-    background:#141428;
-    border-radius:18px;
+    background:#111;
+    border-radius:20px;
+    width:300px;
     overflow:hidden;
+    box-shadow:0 0 20px rgba(0,255,255,0.3);
     transition:0.4s;
-    box-shadow:0 0 20px rgba(0,255,255,0.2);
+    cursor:pointer;
 }
 
 .card:hover{
-    transform:translateY(-12px);
-    box-shadow:0 0 30px rgba(255,0,200,0.5);
+    transform:scale(1.07);
+    box-shadow:0 0 40px rgba(255,0,200,0.6);
 }
 
 .card img{
     width:100%;
-    height:220px;
+    height:200px;
     object-fit:cover;
 }
 
-.card-content{
-    padding:25px;
-}
-
-.card h3{
-    margin-top:0;
+.card h2{
+    padding:20px;
     color:#00f7ff;
 }
 
 .card p{
-    color:#dddddd;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
+    padding:0 20px 20px 20px;
 }
 
 footer{
     text-align:center;
-    padding:50px;
-    background:#0d0d1a;
-    color:#777;
-    margin-top:60px;
+    padding:30px;
+    color:#aaa;
+}
+
+@keyframes aparecer{
+    from{opacity:0;transform:translateY(-30px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+a{
+    text-decoration:none;
+    color:white;
 }
 
 </style>
 </head>
-
 <body>
 
-<div class="hero">
-    <h1>Entre Pixeles y Realidad</h1>
-    <p>Explorando lo que los videojuegos nos dan… y lo que nos quitan.</p>
+<header>
+    <h1>Zona Gamer Consciente</h1>
+    <p>Disfruta los videojuegos sin perder el control</p>
+</header>
+
+<div class="container">
+
+<a href="peligros.html">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5" alt="">
+<h2>Riesgos ocultos</h2>
+<p>Lo que nadie te cuenta sobre el uso excesivo.</p>
 </div>
+</a>
 
-<div class="section">
-    <h2>Publicaciones</h2>
+<a href="exceso.html">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6" alt="">
+<h2>Señales de alerta</h2>
+<p>Detecta si estás perdiendo el equilibrio.</p>
+</div>
+</a>
 
-    <div class="grid">
+<a href="historia.html">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420" alt="">
+<h2>Historia real</h2>
+<p>Cómo alguien recuperó el control sin dejar de jugar.</p>
+</div>
+</a>
 
-        <a href="peligros.html">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
-                <div class="card-content">
-                    <h3>¿Los videojuegos son peligrosos?</h3>
-                    <p>Analizamos si el problema son los videojuegos o la forma en que los usamos.</p>
-                </div>
-            </div>
-        </a>
-
-        <a href="exceso.html">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
-                <div class="card-content">
-                    <h3>5 señales de exceso</h3>
-                    <p>Cuando jugar deja de ser entretenimiento y empieza a afectar tu vida.</p>
-                </div>
-            </div>
-        </a>
-
-        <a href="historia.html">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
-                <div class="card-content">
-                    <h3>Me di cuenta cuando ya no me divertía</h3>
-                    <p>Un testimonio sobre recuperar el equilibrio sin abandonar los videojuegos.</p>
-                </div>
-            </div>
-        </a>
-
-    </div>
 </div>
 
 <footer>
-© 2026 Entre Pixeles y Realidad
+Proyecto personal 2026 | Blog gamer responsable
 </footer>
 
 </body>
